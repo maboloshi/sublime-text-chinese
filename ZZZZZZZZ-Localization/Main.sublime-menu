@@ -1,52 +1,52 @@
 [
     {
         "mnemonic": "F", 
-        "id": "file", 
-        "caption": "文件"
+        "caption": "文件", 
+        "id": "file"
     }, 
     {
         "mnemonic": "E", 
-        "id": "edit", 
-        "caption": "编辑"
+        "caption": "编辑", 
+        "id": "edit"
     }, 
     {
         "mnemonic": "S", 
-        "id": "selection", 
-        "caption": "选择"
+        "caption": "选择", 
+        "id": "selection"
     }, 
     {
         "mnemonic": "I", 
-        "id": "find", 
-        "caption": "查找"
+        "caption": "查找", 
+        "id": "find"
     }, 
     {
         "mnemonic": "V", 
-        "id": "view", 
-        "caption": "视图"
+        "caption": "视图", 
+        "id": "view"
     }, 
     {
         "mnemonic": "G", 
-        "id": "goto", 
-        "caption": "跳转"
+        "caption": "跳转", 
+        "id": "goto"
     }, 
     {
         "mnemonic": "T", 
-        "id": "tools", 
-        "caption": "工具"
+        "caption": "工具", 
+        "id": "tools"
     }, 
     {
         "mnemonic": "P", 
-        "id": "project", 
-        "caption": "项目"
+        "caption": "项目", 
+        "id": "project"
     }, 
     {
         "mnemonic": "N", 
-        "id": "preferences", 
-        "caption": "首选项"
+        "caption": "首选项", 
+        "id": "preferences"
     }, 
     {
         "mnemonic": "H", 
-        "id": "help", 
-        "caption": "Help"
+        "caption": "帮助", 
+        "id": "help"
     }
 ]
