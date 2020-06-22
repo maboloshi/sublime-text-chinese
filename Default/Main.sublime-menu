@@ -43,11 +43,11 @@
 					{ "command": "open_recent_folder", "args": {"index": 10 } },
 					{ "command": "open_recent_folder", "args": {"index": 11 } },
 					{ "caption": "-" },
-					{ "command": "clear_recent_files", "caption": "清除记录" }
+					{ "command": "clear_recent_files", "caption": "清除历史记录" }
 				]
 			},
 			{
-				"caption": "重新用...编码打开",
+				"caption": "指定编码方式打开",
 				"children":
 				[
 					{ "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },
@@ -89,7 +89,7 @@
 			{ "command": "clone_file", "caption": "克隆文件", "mnemonic": "e" },
 			{ "command": "save", "args": {"async": true}, "caption": "保存", "mnemonic": "S" },
 			{
-				"caption": "以...编码保存",
+				"caption": "指定编码方式保存",
 				"children":
 				[
 					{ "caption": "UTF-8", "command": "save", "args": { "async": true, "encoding": "utf-8" } },
@@ -176,9 +176,9 @@
 					{ "command": "indent", "caption": "增加缩进" },
 					{ "command": "unindent", "caption": "减少缩进" },
 					{ "command": "reindent", "args": {"single_line": true}, "caption": "恢复缩进" },
-					{ "command": "swap_line_up", "caption": "向上切换行" },
-					{ "command": "swap_line_down", "caption": "向下切换行"},
-					{ "command": "duplicate_line", "caption": "重复光标所在行" },
+					{ "command": "swap_line_up", "caption": "向上交换一行" },
+					{ "command": "swap_line_down", "caption": "向下交换一行"},
+					{ "command": "duplicate_line", "caption": "克隆行" },
 					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "删除行" },
 					{ "command": "join_lines", "caption": "合并行" }
 				]
@@ -188,8 +188,8 @@
 				"id": "comment",
 				"children":
 				[
-					{ "command": "toggle_comment", "args": {"block": false}, "caption": "开启/关闭单行注释" },
-					{ "command": "toggle_comment", "args": {"block": true}, "caption": "开启/关闭多行注释" }
+					{ "command": "toggle_comment", "args": {"block": false}, "caption": "添加/撤销单行注释" },
+					{ "command": "toggle_comment", "args": {"block": true}, "caption": "添加/撤销多行注释" }
 				]
 			},
 			{
@@ -197,18 +197,18 @@
 				"id": "text",
 				"children":
 				[
-					{ "command": "revert_hunk" },
-					{ "command": "revert_modification" },
-					{ "command": "toggle_inline_diff" },
+					{ "command": "revert_hunk", "caption": "还原差异"  },
+					{ "command": "revert_modification", "caption": "还原修改" },
+					{ "command": "toggle_inline_diff", "caption": "显示/隐藏内嵌差异块" },
 					{ "caption": "-" },
-					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "在此前插入行" },
-					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "在此后插入行" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "向上插入空行" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "向下插入空行" },
 					{ "caption": "-" },
 					{ "command": "delete_word", "args": { "forward": true }, "caption": "向前删除单词" },
 					{ "command": "delete_word", "args": { "forward": false }, "caption": "向后删除单词" },
 					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "删除行" },
-					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "删除到行末尾" },
-					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "删除到行开始" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "删除至行尾" },
+					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "删除至行首" },
 					{ "caption": "-" },
 					{ "command": "transpose", "caption": "互换位置(字符/选区)" }
 				]
@@ -323,17 +323,17 @@
 			{ "command": "invert_selection", "caption": "反向选择" },
 			{ "caption": "-" },
 			{ "command": "select_all", "caption": "选择全部" },
-			{ "command": "expand_selection", "args": {"to": "smart"}, "caption": "Expand Selection" },			
+			{ "command": "expand_selection", "args": {"to": "smart"}, "caption": "扩展选区" },			
 			{ "command": "expand_selection", "args": {"to": "line"}, "caption": "选择至整行" },
 			{ "command": "find_under_expand", "caption": "选择至单词" },
 			{ "command": "expand_selection_to_paragraph", "caption": "选择至段落" },
 			{ "command": "expand_selection", "args": {"to": "scope"}, "caption": "选择至节点" },
 			{ "command": "expand_selection", "args": {"to": "brackets"}, "caption": "选择至括号" },
 			{ "command": "expand_selection", "args": {"to": "indentation"}, "caption": "选择至缩进" },
-			{ "command": "expand_selection", "args": {"to": "tag"}, "caption": "选择至标签" },
+			//{ "command": "expand_selection", "args": {"to": "tag"}, "caption": "选择至标签" },
 			{ "caption": "-" },
-			{ "command": "select_lines", "args": {"forward": false}, "caption": "添加前一行" },
-			{ "command": "select_lines", "args": {"forward": true}, "caption": "添加下一行" },
+			{ "command": "select_lines", "args": {"forward": false}, "caption": "向上增选一行" },
+			{ "command": "select_lines", "args": {"forward": true}, "caption": "向下增选一行" },
 		]
 	},
 	{
@@ -355,8 +355,8 @@
 			{ "command": "find_under_expand", "caption": "快速添加下一个" },
 			{ "command": "find_under_expand_skip", "caption": "快速跳到下一个", "platform": "!OSX" },
 			{ "caption": "-" },
-			{ "command": "slurp_find_string", "caption": "使用所选内容查找" },
-			{ "command": "slurp_replace_string", "caption": "使用所选内容替换" },
+			{ "command": "slurp_find_string", "caption": "在所选内容中查找" },
+			{ "command": "slurp_replace_string", "caption": "在所选内容中替换" },
 			{ "caption": "-" },
 			{ "command": "show_panel", "args": {"panel": "find_in_files"}, "caption": "在文件中查找…" },
 			{
@@ -365,8 +365,8 @@
 				"children":
 				[
 					{ "command": "show_panel", "args": {"panel": "output.find_results"}, "caption": "显示结果面板" },
-					{ "command": "next_result", "caption": "下一结果" },
-					{ "command": "prev_result", "caption": "上一结果" }
+					{ "command": "next_result", "caption": "下一个结果" },
+					{ "command": "prev_result", "caption": "上一个结果" }
 				]
 			}
 		]
@@ -482,7 +482,7 @@
 				"caption": "分组",
 				"children":
 				[
-					{ "command": "new_pane", "caption": "文件移到新组" },
+					{ "command": "new_pane", "caption": "移动文件到新组" },
 					{ "command": "new_pane", "args": {"move": false}, "caption": "新建组" },
 					{ "command": "close_pane", "caption": "关闭组" },
 
@@ -622,8 +622,8 @@
 			},
 			{ "caption": "-" },
 			{ "command": "toggle_setting", "args": {"setting": "spell_check"}, "caption": "拼写检查", "checkbox": true },
-			{ "command": "next_misspelling", "caption": "下一拼写错误" },
-			{ "command": "prev_misspelling", "caption": "上一拼写错误" },
+			{ "command": "next_misspelling", "caption": "下一处拼写错误" },
+			{ "command": "prev_misspelling", "caption": "上一处拼写错误" },
 			{
 				"caption": "拼写字典",
 				"children": [ { "command": "$dictionaries" } ]
@@ -636,20 +636,20 @@
 		"id": "goto",
 		"children":
 		[
-			{ "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "跳到任何…", "mnemonic": "A" },
+			{ "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "跳转到任意…", "mnemonic": "A" },
 			{ "caption": "-" },
-			{ "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "跳到符号…" },
-			{ "command": "goto_symbol_in_project", "caption": "跳到项目中符号…" },
-			{ "command": "goto_definition", "caption": "跳到预定义…" },
-			{ "command": "goto_reference", "caption": "跳到引用…" },
-			// { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "跳到单词…" },
-			{ "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "跳到行…" },
+			{ "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "跳转到符号…" },
+			{ "command": "goto_symbol_in_project", "caption": "跳转到项目中符号…" },
+			{ "command": "goto_definition", "caption": "跳转到定义…" },
+			{ "command": "goto_reference", "caption": "跳转到引用…" },
+			// { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "跳转到单词…" },
+			{ "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "跳转到行…" },
 			{ "caption": "-" },
-			{ "command": "next_modification", "caption": "Next Modification" },
-			{ "command": "prev_modification", "caption": "Previous Modification" },
+			{ "command": "next_modification", "caption": "下一处修改" },
+			{ "command": "prev_modification", "caption": "上一处修改" },
 			{ "caption": "-" },
-			{ "command": "jump_back", "caption": "往回跳" },
-			{ "command": "jump_forward", "caption": "往前跳" },
+			{ "command": "jump_back", "caption": "跳转到上一视图(光标位置)" },
+			{ "command": "jump_forward", "caption": "跳转到下一视图(光标位置)" },
 			{ "caption": "-" },
 			{
 				"caption": "切换文件",
@@ -657,11 +657,11 @@
 				"id": "switch_file",
 				"children":
 				[
-					{ "command": "next_view", "caption": "下一文件" },
-					{ "command": "prev_view", "caption": "上一文件" },
+					{ "command": "next_view", "caption": "下一个文件" },
+					{ "command": "prev_view", "caption": "上一个文件" },
 					{ "caption": "-" },
-					{ "command": "next_view_in_stack", "caption": "在堆栈中的下一文件" },
-					{ "command": "prev_view_in_stack", "caption": "在堆栈中的前一文件" },
+					{ "command": "next_view_in_stack", "caption": "在堆栈中的下一个文件" },
+					{ "command": "prev_view_in_stack", "caption": "在堆栈中的上一个文件" },
 					{ "caption": "-" },
 					{ "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]}, "caption": "切换头文件/源文件", "mnemonic": "H" },
 					{ "caption": "-" },
@@ -684,9 +684,9 @@
 				"id": "scroll",
 				"children":
 				[
-					{ "command": "show_at_center", "caption": "滚动到选择" },
-					{ "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "向上一行" },
-					{ "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "向下一行" }
+					{ "command": "show_at_center", "caption": "跳转到当前光标位置" },
+					{ "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "往上滚动一行" },
+					{ "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "往下滚动一行" }
 				]
 			},
 			{
@@ -695,10 +695,10 @@
 				"id": "bookmarks",
 				"children":
 				[
-					{ "command": "toggle_bookmark", "caption": "开启/关闭书签" },
-					{ "command": "next_bookmark", "caption": "下一书签" },
-					{ "command": "prev_bookmark", "caption": "前一书签" },
-					{ "command": "clear_bookmarks", "caption": "清除书签" },
+					{ "command": "toggle_bookmark", "caption": "添加/删除书签" },
+					{ "command": "next_bookmark", "caption": "跳转到下一书签" },
+					{ "command": "prev_bookmark", "caption": "跳转到上一书签" },
+					{ "command": "clear_bookmarks", "caption": "清除全部书签" },
 					{ "command": "select_all_bookmarks", "caption": "选择所有书签" },
 					{ "caption": "-" },
 					{ "command": "select_bookmark", "args": {"index": 0} },
@@ -758,7 +758,7 @@
 				]
 			},
 			{ "command": "build", "caption": "编译", "mnemonic": "B" },
-			{ "command": "build", "args": {"select": true}, "caption": "用…编译" },
+			{ "command": "build", "args": {"select": true}, "caption": "编译…" },
 			{ "command": "cancel_build", "caption": "取消编译", "mnemonic": "C" },
 			{
 				"caption": "编译结果",
@@ -766,8 +766,8 @@
 				"children":
 				[
 					{ "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "显示编译结果", "mnemonic": "S" },
-					{ "command": "next_result", "caption": "下一结果", "mnemonic": "N" },
-					{ "command": "prev_result", "caption": "上一结果", "mnemonic": "P" }
+					{ "command": "next_result", "caption": "下一个结果", "mnemonic": "N" },
+					{ "command": "prev_result", "caption": "上一个结果", "mnemonic": "P" }
 				]
 			},
 			{ "command": "toggle_save_all_on_build", "caption": "保存所有有关编译", "mnemonic": "A", "checkbox": true },
@@ -791,11 +791,11 @@
 					{ "caption": "-" },
 					{ "command": "profile_plugins", "caption": "插件性能报告" },
 					{ "caption": "-" },
-					{ "command": "view_resource", "caption": "View Package File…" },
+					{ "command": "view_resource", "caption": "查看插件包文件…" },
 					{ "command": "show_scope_name", "caption": "显示节点名字" },
 				]
 			},
-			{ "command": "install_package_control", "caption": "安装包管理器…" },
+			{ "command": "install_package_control", "caption": "安装插件管理器…" },
 			{ "caption": "-", "id": "end" }
 		]
 	},
@@ -809,7 +809,7 @@
 			{ "command": "prompt_switch_project_or_workspace", "caption": "切换项目…" },
 			{ "command": "prompt_select_workspace", "caption": "快速切换项目…", "mnemonic": "S" },
 			{
-				"caption": "最近项目",
+				"caption": "最近打开的项目",
 				"children":
 				[
 					{ "command": "open_recent_project_or_workspace", "args": {"index": 0 } },
@@ -821,11 +821,11 @@
 					{ "command": "open_recent_project_or_workspace", "args": {"index": 6 } },
 					{ "command": "open_recent_project_or_workspace", "args": {"index": 7 } },
 					{ "caption": "-" },
-					{ "command": "clear_recent_projects_and_workspaces", "caption": "清除项目记录" }
+					{ "command": "clear_recent_projects_and_workspaces", "caption": "清除历史记录" }
 				]
 			},
 			{ "caption": "-" },
-			{ "command": "save_project_and_workspace_as", "caption": "另存项目为…", "mnemonic": "A" },
+			{ "command": "save_project_and_workspace_as", "caption": "项目另存为…", "mnemonic": "A" },
 			{ "command": "close_workspace", "caption": "关闭项目", "mnemonic": "C" },
 			{ "command": "open_file", "args": {"file": "${project}"}, "caption": "编辑项目" },
 			{ "caption": "-" },
@@ -877,7 +877,7 @@
 				"command": "select_color_scheme"
 			},
 			{
-				"caption": "主题…",
+				"caption": "主题方案…",
 				"command": "select_theme"
 			},
 			{
@@ -890,24 +890,29 @@
 					{ "command": "reset_font_size", "caption": "默认" }
 				]
 			},
+			{ "caption": "-" },
+			{
+				"caption": "插件设置",
+				"id": "package-settings"
+			},
 		]
 	},
 	{
-		"caption": "Help",
+		"caption": "帮助",
 		"mnemonic": "H",
 		"id": "help",
 		"children":
 		[
 			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/3/"}, "caption": "官方文档" },
 			{ "command": "open_url", "args": {"url": "https://twitter.com/sublimehq"}, "caption": "官方Twitter" },
-			{ "command": "open_url", "args": {"url": "https://i.rexdf.org"}, "caption": "汉化 by Rexdf" },
+			{ "command": "open_url", "args": {"url": "https://github.com/maboloshi/sublime-text-chinese"}, "caption": "汉化 by maboloshi" },
 			{ "caption": "-" },
 			{ "command": "show_progress_window", "caption": "索引状态…" },
 			{ "caption": "-" },
-			{ "command": "purchase_license", "caption": "购买授权"},
-			{ "command": "upgrade_license", "caption": "升级授权"},
-			{ "command": "show_license_window", "caption": "输入注册码" },
-			{ "command": "remove_license", "caption": "删除注册信息"},
+			{ "command": "purchase_license", "caption": "购买许可证"},
+			{ "command": "upgrade_license", "caption": "升级许可证"},
+			{ "command": "show_license_window", "caption": "输入许可证" },
+			{ "command": "remove_license", "caption": "删除许可证"},
 			{ "caption": "-" },
 			{ "command": "update_check", "caption": "检查更新…", "platform": "!Linux" },
 			{ "command": "show_changelog", "caption": "更新日志…" },
