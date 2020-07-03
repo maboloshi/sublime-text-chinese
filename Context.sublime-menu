@@ -1,6 +1,6 @@
 [
 	{ "command": "open_context_url", "caption": "打开网址" },
-	{ "command": "goto_definition", "caption": "转到定义" },
+	{ "command": "goto_definition", "caption": "跳转到定义" },
 	{ "caption": "-", "id": "diff" },
 	{ "command": "toggle_inline_diff", "caption": "显示/隐藏内嵌差异块" },
 	{ "command": "revert_hunk", "caption": "还原差异" },
