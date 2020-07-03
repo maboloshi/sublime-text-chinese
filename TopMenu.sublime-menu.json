@@ -42,7 +42,15 @@
 	{
 		"id": "preferences",
 		"caption": "首选项",
-		"mnemonic": "n"
+		"mnemonic": "n",
+		"children":
+		[
+			{ "caption": "-" },
+			{
+				"caption": "插件设置",
+				"id": "package-settings"
+			},
+		]
 	},
 	{
 		"id": "help",
