@@ -197,7 +197,7 @@
 				"id": "text",
 				"children":
 				[
-					{ "command": "revert_hunk" },
+					{ "command": "revert_hunk", "caption": "还原差异"  },
 					{ "command": "revert_modification", "caption": "还原修改" },
 					{ "command": "toggle_inline_diff", "caption": "显示/隐藏内嵌差异块" },
 					{ "caption": "-" },
@@ -323,7 +323,7 @@
 			{ "command": "invert_selection", "caption": "反向选择" },
 			{ "caption": "-" },
 			{ "command": "select_all", "caption": "选择全部" },
-			{ "command": "expand_selection", "args": {"to": "smart"}, "caption": "Expand Selection" },
+			{ "command": "expand_selection", "args": {"to": "smart"}, "caption": "扩展选区" },
 			{ "command": "expand_selection", "args": {"to": "line"}, "caption": "选择至整行" },
 			{ "command": "find_under_expand", "caption": "选择至单词" },
 			{ "command": "expand_selection_to_paragraph", "caption": "选择至段落" },
@@ -791,7 +791,7 @@
 					{ "caption": "-" },
 					{ "command": "profile_plugins", "caption": "插件性能报告" },
 					{ "caption": "-" },
-					{ "command": "view_resource", "caption": "View Package File…" },
+					{ "command": "view_resource", "caption": "查看插件包文件…" },
 					{ "command": "show_scope_name", "caption": "显示节点名字" },
 				]
 			},
