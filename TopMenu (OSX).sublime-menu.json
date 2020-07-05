@@ -1,61 +1,60 @@
 [
 	{
 		"id": "file",
-		"caption": "文件(F)",
+		"caption": "文件",
 		"mnemonic": "F"
 	},
 	{
 		"id": "edit",
-		"caption": "编辑(E)",
+		"caption": "编辑",
 		"mnemonic": "E"
 	},
 	{
 		"id": "selection",
-		"caption": "选择(S)",
+		"caption": "选择",
 		"mnemonic": "S"
 	},
 	{
 		"id": "find",
-		"caption": "查找(I)",
-		"mnemonic": "I"
+		"caption": "查找",
+		"mnemonic": "i"
 	},
 	{
 		"id": "view",
-		"caption": "视图(V)",
+		"caption": "视图",
 		"mnemonic": "V"
 	},
 	{
 		"id": "goto",
-		"caption": "跳转(G)",
+		"caption": "跳转",
 		"mnemonic": "G"
 	},
 	{
 		"id": "tools",
-		"caption": "工具(T)",
+		"caption": "工具",
 		"mnemonic": "T"
 	},
 	{
 		"id": "project",
-		"caption": "项目(P)",
+		"caption": "项目",
 		"mnemonic": "P"
 	},
 	{
 		"id": "preferences",
-		"caption": "首选项(N)",
-		"mnemonic": "N",
+		"caption": "首选项",
+		"mnemonic": "n",
 		"children":
 		[
 			{ "caption": "-" },
 			{
-				"caption": "插件设置(P)",
-				"mnemonic": "P",
+				"caption": "插件设置",
 				"id": "package-settings"
 			},
 		]
 	},
 	{
 		"id": "help",
-		"caption": "帮助(H)",
+		"caption": "帮助",
 		"mnemonic": "H"
 	}
 ]

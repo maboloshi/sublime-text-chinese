@@ -6,12 +6,12 @@
 ### 手动安装
 
 - 打开`Sublime Text `用户包安装路径：工具栏 `Preference` --> `Browse Packages…`
-- 创建名为`Default`和`ZZ-TopMenu`的文件夹
-- 将本项目打包下载，将全部`*.sublime-menu`文件解压到上述文件夹
-- 将`TopMenu.sublime-menu.json`文件复制到`ZZ-TopMenu`的文件夹，并重命名为`Main.sublime-menu`
+- 创建名为`Default`的文件夹
+- 将本项目打包下载，将全部文件解压到上述文件夹
 
 ### Git 项目克隆
 
 - ```git clone https://github.com/maboloshi/sublime-text-chinese.git <用户包安装路径/Default>```
-- 在`用户包安装路径/`下创建名`ZZ-TopMenu`的文件夹
-- 将`TopMenu.sublime-menu.json`文件复制到`ZZ-TopMenu`的文件夹，并重命名为`Main.sublime-menu`
+
+### 使用
+当添加完中文语言包后运行 ST, 将自动选用与系统匹配的菜单
