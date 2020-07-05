@@ -16,3 +16,6 @@ def plugin_loaded():
 		shutil.copy("Main.sublime-menu.json","Main.sublime-menu")
 		if not os.path.isdir("../ZZ-TopMenu/"): os.mkdir("../ZZ-TopMenu/")
 		shutil.copy("TopMenu.sublime-menu.json","../ZZ-TopMenu/Main.sublime-menu")
+
+	if not os.path.isdir("../Diff/"): os.mkdir("../Diff/")
+	shutil.copy("Diff-Context.sublime-menu.json","../Diff/Context.sublime-menu")
