@@ -6,6 +6,8 @@
 	{ "command": "close_unmodified_to_right_by_index", "args": { "group": -1, "index": -1 }, "caption": "关闭右侧未修改标签页" },
 	{ "command": "close_deleted_files", "args": { "group": -1 }, "caption": "关闭已删除标签页" },
 	{ "caption": "-" },
+	{ "command": "clone_file", "args": { "add_to_selection": true, "group": -1, "index": -1 }, "caption": "Split View" },
+	{ "caption": "-" },
 	{ "command": "new_file", "caption": "新建文件" },
 	{ "command": "prompt_open_file", "caption": "打开文件" }
 ]
