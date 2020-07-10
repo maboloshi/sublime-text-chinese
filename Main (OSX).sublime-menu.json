@@ -67,7 +67,7 @@
 					{ "caption": "凯尔特语 (ISO 8859-14)", "command": "reopen", "args": {"encoding": "Celtic (ISO 8859-14)" } },
 					{ "caption": "中欧语 (Windows 1250)", "command": "reopen", "args": {"encoding": "Central European (Windows 1250)" } },
 					{ "caption": "中欧语 (ISO 8859-2)", "command": "reopen", "args": {"encoding": "Central European (ISO 8859-2)" } },
-					{ "caption": "Central European (Mac)", "command": "reopen", "args": {"encoding": "Central European (Mac)" } },
+					{ "caption": "中欧语 (Mac)", "command": "reopen", "args": {"encoding": "Central European (Mac)" } },
 					{ "caption": "西里尔语 (Windows 1251)", "command": "reopen", "args": {"encoding": "Cyrillic (Windows 1251)" } },
 					{ "caption": "西里尔语 (Windows 866)", "command": "reopen", "args": {"encoding": "Cyrillic (Windows 866)" } },
 					{ "caption": "西里尔语 (ISO 8859-5)", "command": "reopen", "args": {"encoding": "Cyrillic (ISO 8859-5)" } },
@@ -87,7 +87,7 @@
 					{ "caption": "十六进制", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
 				]
 			},
-			{ "command": "clone_file", "args": {"add_to_selection": true}, "caption": "Split View", "mnemonic": "e" },
+			{ "command": "clone_file", "args": {"add_to_selection": true}, "caption": "克隆文件", "mnemonic": "e" },
 			{ "command": "save", "args": {"async": true}, "caption": "保存", "mnemonic": "S" },
 			{
 				"caption": "指定编码方式保存",
@@ -113,7 +113,7 @@
 					{ "caption": "凯尔特语 (ISO 8859-14)", "command": "save", "args": { "async": true, "encoding": "Celtic (ISO 8859-14)" } },
 					{ "caption": "中欧语 (Windows 1250)", "command": "save", "args": { "async": true, "encoding": "Central European (Windows 1250)" } },
 					{ "caption": "中欧语 (ISO 8859-2)", "command": "save", "args": { "async": true, "encoding": "Central European (ISO 8859-2)" } },
-					{ "caption": "Central European (Mac)", "command": "save", "args": { "async": true, "encoding": "Central European (Mac)" } },
+					{ "caption": "中欧语 (Mac)", "command": "save", "args": { "async": true, "encoding": "Central European (Mac)" } },
 					{ "caption": "西里尔语 (Windows 1251)", "command": "save", "args": { "async": true, "encoding": "Cyrillic (Windows 1251)" } },
 					{ "caption": "西里尔语 (Windows 866)", "command": "save", "args": { "async": true, "encoding": "Cyrillic (Windows 866)" } },
 					{ "caption": "西里尔语 (ISO 8859-5)", "command": "save", "args": { "async": true, "encoding": "Cyrillic (ISO 8859-5)" } },
@@ -371,7 +371,7 @@
 					{ "command": "prev_result", "caption": "上一个结果" }
 				]
 			},
-			{ "command": "cancel_find", "caption": "Cancel Find in Files" },
+			{ "command": "cancel_find", "caption": "取消在文件中查找" },
 		]
 	},
 	{
