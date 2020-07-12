@@ -3,15 +3,6 @@
 
 ## 安装方法
 
-### 手动安装
-
-- 打开`Sublime Text `用户包安装路径：工具栏 `Preference` --> `Browse Packages…`
-- 创建名为`Default`的文件夹
-- 将本项目打包下载，将全部文件解压到上述文件夹
-
-### Git 项目克隆
-
-- ```git clone https://github.com/maboloshi/sublime-text-chinese.git <用户包安装路径/Default>```
-
-### 使用
-当添加完中文语言包后运行 ST, 将自动选用与系统匹配的菜单
+- 添加安装源：工具栏 `Preference` --> `Packages Control` -->选择 `Add Repository`, 填入`https://github.com/maboloshi/sublime-text-chinese`
+- 安装本插件：工具栏 `Preference` --> `Packages Control` -->选择 `Install Package`, 填入`sublime-text-chinese`
+- 该插件将自动选用与系统匹配的菜单
