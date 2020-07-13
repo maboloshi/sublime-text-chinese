@@ -1,0 +1,30 @@
+[
+    {
+        "id": "edit",
+        "children":
+        [
+            {
+                "caption": "Trailing Spaces",
+                "id": "trailing-spaces",
+                "children":
+                [
+                    {
+                        "command": "delete_trailing_spaces",
+                        "caption": "删除"
+                    },
+                    { "caption": "-" },
+                    {
+                        "command": "toggle_trailing_spaces_modified_lines_only",
+                        "caption": "仅修改的行",
+                        "checkbox": true
+                    },
+                    {
+                        "command": "toggle_trailing_spaces",
+                        "caption": "高亮显示",
+                        "checkbox": true
+                    }
+                ]
+            }
+        ]
+    }
+]
