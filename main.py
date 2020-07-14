@@ -6,8 +6,11 @@ import shutil
 def plugin_loaded():
 	os.chdir(os.path.abspath(os.path.dirname(__file__)))
 	packages_path=sublime.packages_path()
-	for item in os.listdir():
-		if os.path.isdir(item) and item != ".git":
+	default_trans_list=["Default","Diff","ZZ-TopMenu"]
+	ins_pack_list=sublime.load_settings("Package Control.sublime-settings").get("installed_packages")
+	trans_list=default_trans_list + ins_pack_list
+	for item in trans_list:
+		if os.path.isdir(item):
 			#original_dir=item
 			#target_dir="../"+ item
 			original_dir=os.path.abspath(item)
@@ -24,8 +27,5 @@ def plugin_loaded():
 						target_file='Main.sublime-menu'
 					else:
 						continue
-				shutil.copy(os.path.join(original_dir, file),os.path.join(target_dir, target_file))
 
-# 下一步:
-# 读取`Package Control.sublime-settings`下的`installed_packages`
-# 读取`Preferences.sublime-settings`下的`ignored_packages`
+				shutil.copy(os.path.join(original_dir, file),os.path.join(target_dir, target_file))
