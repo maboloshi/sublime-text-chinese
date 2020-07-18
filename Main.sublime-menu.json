@@ -87,7 +87,7 @@
 					{ "caption": "十六进制", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
 				]
 			},
-			{ "command": "clone_file", "args": {"add_to_selection": true}, "caption": "克隆文件(E)", "mnemonic": "E" },
+			{ "command": "clone_file", "args": {"add_to_selection": true}, "caption": "拆分视图(E)", "mnemonic": "E" },
 			{ "command": "save", "args": {"async": true}, "caption": "保存(S)", "mnemonic": "S" },
 			{
 				"caption": "指定编码方式保存",
