@@ -177,7 +177,7 @@
 				[
 					{ "command": "indent", "caption": "增加缩进" },
 					{ "command": "unindent", "caption": "减少缩进" },
-					{ "command": "reindent", "args": {"single_line": true}, "caption": "恢复缩进" },
+					{ "command": "reindent", "args": {"single_line": true}, "caption": "整理缩进" },
 					{ "command": "swap_line_up", "caption": "向上交换一行" },
 					{ "command": "swap_line_down", "caption": "向下交换一行"},
 					{ "command": "duplicate_line", "caption": "克隆行" },
