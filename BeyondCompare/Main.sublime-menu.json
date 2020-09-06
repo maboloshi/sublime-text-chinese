@@ -1,0 +1,14 @@
+[
+	{
+		"id": "tools",
+		"children":
+		[
+			{ "id": "end" },
+			{
+				"caption": "BeyondCompare: 显示差异",
+				"command": "beyond_compare",
+				"id": "beyond-compare-launch"
+			}
+		]
+	},
+]
