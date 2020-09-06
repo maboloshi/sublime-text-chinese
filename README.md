@@ -3,6 +3,6 @@
 
 ## 安装方法
 
-- 添加安装源：工具栏 `Preference` --> `Packages Control` -->选择 `Add Repository`, 填入`https://github.com/maboloshi/sublime-text-chinese`
+- 添加安装源：工具栏 `Preference` --> `Packages Control` -->选择 `Add Repository`, 填入`https://github.com/maboloshi/sublime-text-chinese/tree/dev`
 - 安装本插件：工具栏 `Preference` --> `Packages Control` -->选择 `Install Package`, 填入`sublime-text-chinese`
 - 该插件将自动选用与系统匹配的菜单
