@@ -1,0 +1,12 @@
+[
+	{
+		"caption": "-"
+	},
+	{
+		"command": "open_terminal",
+		"args": {
+			"paths": []
+		},
+		"caption": "在终端中打开"
+	}
+]
