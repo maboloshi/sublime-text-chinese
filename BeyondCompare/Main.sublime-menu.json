@@ -11,4 +11,37 @@
 			}
 		]
 	},
+	{
+		"caption": "Preferences",
+		"id": "preferences",
+		"mnemonic": "n",
+		"children": [
+			{
+				"caption": "Package Settings",
+				"id": "package-settings",
+				"mnemonic": "P",
+				"children": [
+					{
+						"caption": "Beyond Compare",
+						"children": [
+							{
+								"command": "open_file",
+								"args": {
+									"file": "${packages}/BeyondCompare/BeyondCompare.sublime-settings"
+								},
+								"caption": "Settings – Default"
+							},
+							{
+								"command": "open_file",
+								"args": {
+									"file": "${packages}/User/BeyondCompare.sublime-settings"
+								},
+								"caption": "Settings – User"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
 ]
