@@ -26,5 +26,41 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "Trailing Spaces",
+                        "children":
+                        [
+                            {
+                                "command": "edit_settings",
+                                "args": {
+                                    "base_file": "${packages}/TrailingSpaces/trailing_spaces.sublime-settings",
+                                    "default": "// Settings in here override those in \"TrailingSpaces/trailing_spaces.sublime-settings\"\n\n{\n\t$0\n}\n",
+                                },
+                                "caption": "Settings"
+                            },
+                            { "caption": "-" },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/TrailingSpaces/README.md",
+                                },
+                                "caption": "Help"
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]
