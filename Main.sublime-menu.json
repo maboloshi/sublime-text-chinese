@@ -769,8 +769,8 @@
 				"children":
 				[
 					{ "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "显示编译结果(S)", "mnemonic": "S" },
-					{ "command": "next_result", "caption": "下一个结果", "mnemonic": "N" },
-					{ "command": "prev_result", "caption": "上一个结果", "mnemonic": "P" }
+					{ "command": "next_result", "caption": "下一个结果(N)", "mnemonic": "N" },
+					{ "command": "prev_result", "caption": "上一个结果(P)", "mnemonic": "P" }
 				]
 			},
 			{ "command": "toggle_save_all_on_build", "caption": "保存所有有关编译(A)", "mnemonic": "A", "checkbox": true },
