@@ -879,13 +879,23 @@
 			},
 			{ "caption": "-" },
 			{
-				"caption": "配色方案…",
+				"caption": "Select Color Scheme…",
 				"command": "select_color_scheme"
 			},
 			{
-				"caption": "主题方案…",
+				"caption": "Customize Color Scheme",
+				"command": "customize_color_scheme"
+			},
+			{ "caption": "-" },
+			{
+				"caption": "Select Theme…",
 				"command": "select_theme"
 			},
+			{
+				"caption": "Customize Theme",
+				"command": "customize_theme"
+			},
+			{ "caption": "-" },
 			{
 				"caption": "字体",
 				"children":
