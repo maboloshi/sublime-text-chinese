@@ -879,20 +879,20 @@
 			},
 			{ "caption": "-" },
 			{
-				"caption": "Select Color Scheme…",
+				"caption": "配色方案…",
 				"command": "select_color_scheme"
 			},
 			{
-				"caption": "Customize Color Scheme",
+				"caption": "自定义配色方案",
 				"command": "customize_color_scheme"
 			},
 			{ "caption": "-" },
 			{
-				"caption": "Select Theme…",
+				"caption": "主题方案…",
 				"command": "select_theme"
 			},
 			{
-				"caption": "Customize Theme",
+				"caption": "自定义主题方案",
 				"command": "customize_theme"
 			},
 			{ "caption": "-" },
