@@ -338,6 +338,18 @@
 			{ "caption": "-" },
 			{ "command": "select_lines", "args": {"forward": false}, "caption": "向上增选一行" },
 			{ "command": "select_lines", "args": {"forward": true}, "caption": "向下增选一行" },
+			{ "caption": "-" },
+			{
+				"caption": "Tab Selection",
+				"children":
+				[
+					{ "command": "unselect_others", "caption": "Unselect Others" },
+					{ "command": "unselect_to_left", "caption": "Unselect to Left" },
+					{ "command": "unselect_to_right", "caption": "Unselect to Right" },
+					{ "command": "select_to_left", "caption": "Select to Left" },
+					{ "command": "select_to_right", "caption": "select to Right" },
+				]
+			},
 		]
 	},
 	{
