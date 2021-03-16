@@ -361,8 +361,8 @@
 					{ "command": "focus_by_index", "args": {"index": 5}, "caption": "Focus Selected Tab 6" },
 					{ "command": "focus_by_index", "args": {"index": 6}, "caption": "Focus Selected Tab 7" },
 					{ "command": "focus_by_index", "args": {"index": 7}, "caption": "Focus Selected Tab 8" },
-					{ "command": "focus_by_index", "args": {"index": 7}, "caption": "Focus Selected Tab 9" },
-					{ "command": "focus_by_index", "args": {"index": 7}, "caption": "Focus Selected Tab 10" },
+					{ "command": "focus_by_index", "args": {"index": 8}, "caption": "Focus Selected Tab 9" },
+					{ "command": "focus_by_index", "args": {"index": 9}, "caption": "Focus Selected Tab 10" },
 				]
 			},
 		]
