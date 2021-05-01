@@ -942,7 +942,7 @@
 		"children":
 		[
 			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/"}, "caption": "官方文档" },
-			{ "command": "open_url", "args": {"url": "https://github.com/sublimehq/sublime_text/issues/new/choose"}, "caption": "Report a Bug" },
+			{ "command": "open_url", "args": {"url": "https://github.com/sublimehq/sublime_text/issues/new/choose"}, "caption": "报告 Bug" },
 			{ "command": "open_url", "args": {"url": "https://twitter.com/sublimehq"}, "caption": "官方Twitter" },
 			{ "command": "open_url", "args": {"url": "https://github.com/maboloshi/sublime-text-chinese"}, "caption": "汉化 by maboloshi" },
 			{ "caption": "-" },
