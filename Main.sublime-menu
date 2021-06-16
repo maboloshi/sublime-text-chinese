@@ -1,0 +1,25 @@
+[
+	{
+		"caption": "Preferences",
+		"id": "preferences",
+		"mnemonic": "n",
+		"children": [
+			{
+				"caption": "Package Settings",
+				"id": "package-settings",
+				"mnemonic": "P",
+				"children": [
+					{
+						"caption": "Sublime Text Chinese",
+						"children": [
+							{
+								"command": "remove_mark_file",
+								"caption": "Delete the marker file and retranslate after restarting ST"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
