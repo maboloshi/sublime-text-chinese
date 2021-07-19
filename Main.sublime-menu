@@ -14,7 +14,7 @@
 						"children": [
 							{
 								"command": "remove_mark_file",
-								"caption": "Delete the marker file and retranslate after restarting ST"
+								"caption": "重置翻译状态"
 							}
 						]
 					}

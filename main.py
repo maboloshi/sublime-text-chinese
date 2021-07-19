@@ -50,4 +50,8 @@ class RemoveMarkFileCommand(sublime_plugin.TextCommand):
         packages_path = sublime.packages_path()
         mark_file = os.path.join(packages_path, "Default", ".do")
         if os.path.isfile(mark_file):
-            os.remove(mark_file)
+            if sublime.ok_cancel_dialog("确定要删除\"翻译标记文件?\""):
+                os.remove(mark_file)
+                sublime.message_dialog("\"翻译标记文件\"已删除，请重新启动ST，更新翻译！")
+        else:
+            sublime.message_dialog("\"翻译标记文件\"已删除，请重新启动ST，更新翻译！")
