@@ -13,8 +13,8 @@
 						"caption": "Sublime Text Chinese",
 						"children": [
 							{
-								"command": "remove_mark_file",
-								"caption": "重置翻译状态"
+								"command": "reset_translation",
+								"caption": "重置翻译"
 							}
 						]
 					}

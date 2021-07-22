@@ -1,57 +1,56 @@
 import sublime
 import sublime_plugin
 import os
-import shutil
 
 
 def plugin_loaded():
-    os.chdir(os.path.abspath(os.path.dirname(__file__)))
-    packages_path = sublime.packages_path()
-
     # 翻译标记文件
+    packages_path = sublime.packages_path()
     mark_file = os.path.join(packages_path, "Default", ".do")
 
-    # 不存在翻译标记文件的情况 需要翻译
+    # 仅当, 不存在"翻译标记文件"时, 进行翻译
     if not os.path.isfile(mark_file):
+        # 当前系统平台
+        platform = sublime.platform()
 
         # 默认翻译插件清单
         default_trans_list = ["Default", "Diff", "ZZ-TopMenu"]
         # 获取已安装插件清单
         ins_pack_list = sublime.load_settings("Package Control.sublime-settings").get("installed_packages")
-        # 合并插件清单
+        # 合并之后的插件清单
         trans_list = default_trans_list + ins_pack_list
+
+        # *.sublime-menu.json 资源清单 (降序)
+        sublime_menu_json_list = sorted(sublime.find_resources("*.sublime-menu.json"), reverse=True)
 
         # 开始翻译
         for item in trans_list:
-            if os.path.isdir(item):
-                # original_dir = item
-                # target_dir = "../"+ item
-                original_dir = os.path.abspath(item)
-                target_dir = os.path.join(packages_path, item)
-                if not os.path.isdir(target_dir):
-                    os.mkdir(target_dir)
-                for file in os.listdir(item):
-                    target_file = file.replace('.json', '')
+            for f in sublime_menu_json_list:
+                if f.startswith("Packages/sublime-text-chinese/" + item):
+                    target_file = packages_path + f.replace("Packages/sublime-text-chinese/", "/").replace('.json', '')
+                    original_file_res = sublime.load_resource(f)
+                    target_dir = os.path.join(packages_path, item)
+                    if not os.path.isdir(target_dir):
+                        os.mkdir(target_dir)
 
                     # OSX 平台 使用无快捷键提示版本
-                    if sublime.platform() == 'osx' and file == 'Main.sublime-menu.json':
-                        continue
-                    if sublime.platform() == 'osx' and file == 'Main (OSX).sublime-menu.json':
-                        target_file = 'Main.sublime-menu'
+                    # 之前使用 sorted 降序处理, 规避了 "Main (OSX).sublime-menu" 被 "Main.sublime-menu" 复写的问题
+                    if platform == 'osx' and target_file.find('Main (OSX).sublime-menu') != -1:
+                        target_file = target_file.replace('Main (OSX)', 'Main')
 
-                    shutil.copy(os.path.join(original_dir, file), os.path.join(target_dir, target_file))
-        # 翻译结束 创建标记文件
+                    # 写入目标"翻译后菜单文件"
+                    open(target_file, "w", encoding='utf8').write(original_file_res)
+
+        # 翻译结束, 创建"翻译标记文件"
         open(mark_file, "w")
 
 
-# 删除翻译标记文件
-class RemoveMarkFileCommand(sublime_plugin.TextCommand):
+# 重置翻译
+class ResetTranslationCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        packages_path = sublime.packages_path()
-        mark_file = os.path.join(packages_path, "Default", ".do")
-        if os.path.isfile(mark_file):
-            if sublime.ok_cancel_dialog("确定要删除\"翻译标记文件?\""):
+        if sublime.ok_cancel_dialog("确定更新或重置翻译？现有翻译将被覆盖..."):
+            mark_file = os.path.join(sublime.packages_path(), "Default", ".do")
+            if os.path.isfile(mark_file):
                 os.remove(mark_file)
-                sublime.message_dialog("\"翻译标记文件\"已删除，请重新启动ST，更新翻译！")
-        else:
-            sublime.message_dialog("\"翻译标记文件\"已删除，请重新启动ST，更新翻译！")
+            plugin_loaded()
+            sublime.message_dialog("翻译已更新！")
