@@ -29,9 +29,9 @@ def plugin_loaded():
                 if f.startswith("Packages/sublime-text-chinese/" + item):
                     target_file = packages_path + f.replace("Packages/sublime-text-chinese/", "/").replace('.json', '')
                     original_file_res = sublime.load_resource(f)
-                    target_dir = os.path.join(packages_path, item)
-                    if not os.path.isdir(target_dir):
-                        os.mkdir(target_dir)
+                    target_dir = os.path.dirname(target_file)
+                    if not os.path.exists(target_dir):
+                        os.makedirs(target_dir)
 
                     # OSX 平台 使用无快捷键提示版本
                     # 之前使用 sorted 降序处理, 规避了 "Main (OSX).sublime-menu" 被 "Main.sublime-menu" 复写的问题
