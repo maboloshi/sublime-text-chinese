@@ -1,0 +1,77 @@
+[
+    { "caption": "-" },
+    {
+        "caption": "HaoGist",
+        "children":
+        [
+            {"caption": "从缓存中打开 Gist", "command": "choose_gist",
+                "args": {
+                    "callback_command": "open_gist"
+                }
+            },
+            {"caption": "从服务器上打开 Gist", "command": "choose_gist",
+                "args": {
+                    "read_cache": false,
+                    "callback_command": "open_gist"
+                }
+            },
+            {"caption": "-"},
+            {"caption": "添加文件到 Gist", "command": "choose_gist",
+                "args": {
+                    "callback_command": "add_file_to_gist",
+                    "include_files": false
+                }
+            },
+            {"caption": "更新至 Gist", "command": "choose_gist",
+                "args": {
+                    "callback_command": "update_content_to_gist"
+                }
+            },
+            {"caption": "删除现有 Gist", "command": "choose_gist",
+                "args": {
+                    "callback_command": "delete_exist_gist"
+                }
+            },
+            {"caption": "从 Gist 中删除文件", "command": "choose_gist",
+                "args": {
+                    "include_files": false,
+                    "callback_command": "delete_file_from_gist"
+                }
+            },
+            {"caption": "在浏览器中打开 Gist", "command": "choose_gist",
+                "args": {
+                    "callback_command": "open_gist_in_browser"
+                }
+            },
+            {"caption": "-"},
+            {"caption": "创建公开 Gist", "command": "create_gist", "args": {"public": true}},
+            {"caption": "创建私有 Gist", "command": "create_gist", "args": {"public": false}},
+            {"caption": "-"},
+            {"caption": "更新当前 Gist", "command": "update_gist"},
+            {"caption": "刷新当前 Gist", "command": "refresh_gist"},
+            {"caption": "重命名当前 Gist", "command": "rename_gist"},
+            {"caption": "删除当前 Gist", "command": "delete_gist"},
+            {"caption": "更新当前 Gist 描述", "command": "update_gist_description"},
+            {"caption": "在浏览器中打开当前 Gist", "command": "open_current_gist_in_browser"},
+            {"caption": "-"},
+            {"caption": "清楚 Gist 缓存", "command": "clear_gist_cache"},
+            {"caption": "重载 Gist 缓存", "command": "choose_gist", "args": {"read_cache": false}},
+            {"caption": "-"},
+            {"caption": "设置", "children": [
+                {"caption": "设置 – 默认", "command": "open_file",
+                    "args": {
+                        "file": "${packages}/HaoGist/config/settings/HaoGist.sublime-settings"
+                    }
+                },
+                {"caption": "设置 – 用户", "command": "open_file",
+                    "args": {
+                        "file": "${packages}/User/HaoGist.sublime-settings"
+                    }
+                }
+            ]},
+            {"caption": "-"},
+            {"caption": "发布说明", "command": "release_note"},
+            {"caption": "关于", "command": "about_hao_gist"},
+        ]
+    }
+]
