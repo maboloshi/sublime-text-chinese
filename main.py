@@ -39,7 +39,7 @@ def plugin_loaded():
                         target_file = target_file.replace('Main (OSX)', 'Main')
 
                     # 写入目标"翻译后菜单文件"
-                    open(target_file, "w", encoding='utf8').write(original_file_res)
+                    open(target_file, "w", encoding='utf8', newline='').write(original_file_res)
 
         # 翻译结束, 创建"翻译标记文件"
         open(mark_file, "w")
