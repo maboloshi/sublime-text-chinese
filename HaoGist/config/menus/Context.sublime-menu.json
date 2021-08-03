@@ -54,7 +54,7 @@
             {"caption": "更新当前 Gist 描述", "command": "update_gist_description"},
             {"caption": "在浏览器中打开当前 Gist", "command": "open_current_gist_in_browser"},
             {"caption": "-"},
-            {"caption": "清楚 Gist 缓存", "command": "clear_gist_cache"},
+            {"caption": "清除 Gist 缓存", "command": "clear_gist_cache"},
             {"caption": "重载 Gist 缓存", "command": "choose_gist", "args": {"read_cache": false}},
             {"caption": "-"},
             {"caption": "设置", "children": [
