@@ -1,0 +1,70 @@
+[
+    // {
+    //     "caption": "-", "id":"Local History"
+    // },
+    {
+        "caption": "Local History",
+        "children":
+        [
+            {
+                "caption": "打开",
+                "command": "history_open"
+            },
+            {
+                "caption": "快照",
+                "children":
+                [
+                    {
+                        "caption": "打开",
+                        "command": "history_open_snapshot"
+                    },
+                    {
+                        "caption": "创建",
+                        "command": "history_create_snapshot"
+                    },
+                    {
+                        "caption": "对比",
+                        "command": "history_open_snapshot",
+                        "args": {"compare": true}
+                    },
+                    {
+                        "caption": "用快照进行对比和替换",
+                        "command": "history_open_snapshot",
+                        "args": {"replace": true}
+                    },
+                    {
+                        "caption": "与快照并列比较",
+                        "command": "history_open_snapshot",
+                        "args": {"sbs": true}
+                    }
+                ]
+            },
+            {
+                "caption": "与历史比较",
+                "children":
+                [
+                    {
+                        "caption": "对比",
+                        "command": "history_compare"
+                    },
+                    {
+                        "caption": "用快照进行对比和替换",
+                        "command": "history_replace"
+                    },
+                    {
+                        "caption": "与快照并列比较",
+                        "command": "history_compare",
+                        "args": {"sbs": true}
+                    },
+                ]
+            },
+            {
+                "caption": "在资源管理器中浏览",
+                "command": "history_browse"
+            }
+        ]
+    },
+    {
+        "caption": "-"
+    }
+]
