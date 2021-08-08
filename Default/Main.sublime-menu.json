@@ -288,7 +288,7 @@
 					{ "command": "wrap_lines", "args": {"width": 120}, "caption": "每 120 个字符自动换行" }
 				]
 			},
-			{ "command": "auto_complete", "caption": "显示代码自动补全" },
+			{ "command": "auto_complete", "caption": "显示自动完成提示" },
 			{ "caption": "-", "id": "permute" },
 
 			{ "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "行排序(S)", "mnemonic": "S" },
@@ -383,7 +383,7 @@
 			{ "caption": "-" },
 			{ "command": "find_under", "caption": "快速查找" },
 			{ "command": "find_all_under", "caption": "快速查找全部" },
-			{ "command": "find_under_expand", "caption": "快速添加下一个" },
+			{ "command": "find_under_expand", "caption": "快速增选下一个" },
 			{ "command": "find_under_expand_skip", "caption": "快速跳到下一个", "platform": "!OSX" },
 			{ "caption": "-" },
 			{ "command": "slurp_find_string", "caption": "在所选内容中查找" },
@@ -420,7 +420,7 @@
 				]
 			},
 			{ "command": "toggle_minimap", "caption": "显示/隐藏迷你地图" },
-			{ "command": "toggle_tabs", "caption": "显示/隐藏标签页" },
+			{ "command": "toggle_tabs", "caption": "显示/隐藏标签栏" },
 			{ "command": "toggle_status_bar", "caption": "显示/隐藏状态栏" },
 			{ "command": "toggle_menu", "caption": "显示/隐藏菜单栏" },
 			{ "command": "show_panel", "args": {"panel": "console", "toggle": true}, "caption": "显示/隐藏控制台" },
@@ -558,8 +558,8 @@
 				"children":
 				[
 
-					{ "command": "focus_neighboring_group", "caption": "下一个" },
-					{ "command": "focus_neighboring_group", "args": {"forward": false}, "caption": "上一个" },
+					{ "command": "focus_neighboring_group", "caption": "下一分组" },
+					{ "command": "focus_neighboring_group", "args": {"forward": false}, "caption": "上一分组" },
 					{ "caption": "-" },
 					{ "command": "focus_group", "args": {"group": 0}, "caption": "分组 1" },
 					{ "command": "focus_group", "args": {"group": 1}, "caption": "分组 2" },
@@ -572,8 +572,8 @@
 				"mnemonic": "M",
 				"children":
 				[
-					{ "command": "move_to_neighboring_group", "caption": "下一个" },
-					{ "command": "move_to_neighboring_group", "args": {"forward": false}, "caption": "上一个" },
+					{ "command": "move_to_neighboring_group", "caption": "下一分组" },
+					{ "command": "move_to_neighboring_group", "args": {"forward": false}, "caption": "上一分组" },
 					{ "caption": "-" },
 					{ "command": "move_to_group", "args": {"group": 0}, "caption": "分组 1" },
 					{ "command": "move_to_group", "args": {"group": 1}, "caption": "分组 2" },
@@ -716,7 +716,7 @@
 				"id": "scroll",
 				"children":
 				[
-					{ "command": "show_at_center", "caption": "跳转到当前光标位置" },
+					{ "command": "show_at_center", "caption": "滚动到当前光标位置" },
 					{ "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "往上滚动一行" },
 					{ "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "往下滚动一行" }
 				]
@@ -802,7 +802,7 @@
 					{ "command": "prev_result", "caption": "上一个结果(P)", "mnemonic": "P" }
 				]
 			},
-			{ "command": "toggle_save_all_on_build", "caption": "保存所有有关编译(A)", "mnemonic": "A", "checkbox": true },
+			{ "command": "toggle_save_all_on_build", "caption": "编译时保存全部(A)", "mnemonic": "A", "checkbox": true },
 			{ "caption": "-", "id": "macros" },
 			{ "command": "toggle_record_macro", "caption": "录制宏(M)", "mnemonic": "M" },
 			{ "command": "run_macro", "caption": "运行宏(P)", "mnemonic": "P" },
@@ -813,7 +813,7 @@
 			},
 			{ "caption": "-" },
 			{
-				"caption": "插件开发",
+				"caption": "开发者",
 				"children":
 				[
 					{ "command": "new_plugin", "caption": "新建插件…" },
@@ -906,20 +906,20 @@
 			},
 			{ "caption": "-" },
 			{
-				"caption": "配色方案…",
+				"caption": "选择配色方案…",
 				"command": "select_color_scheme"
 			},
 			{
-				"caption": "自定义配色方案",
+				"caption": "定制配色方案",
 				"command": "customize_color_scheme"
 			},
 			{ "caption": "-" },
 			{
-				"caption": "主题方案…",
+				"caption": "选择主题方案…",
 				"command": "select_theme"
 			},
 			{
-				"caption": "自定义主题方案",
+				"caption": "定制主题方案",
 				"command": "customize_theme"
 			},
 			{ "caption": "-" },
