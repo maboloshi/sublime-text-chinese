@@ -553,7 +553,7 @@
 				]
 			},
 			{
-				"caption": "焦点分组(F)",
+				"caption": "切换分组(F)",
 				"mnemonic": "F",
 				"children":
 				[
