@@ -1,0 +1,38 @@
+[
+	{
+		"caption": "-"
+	},
+
+	{
+		"command": "get_line_endings_project_files",
+		"caption": "列出项目中所有文件的换行符"
+    }, {
+		"caption": "-"
+    },
+	{
+		"command": "set_line_ending_window",
+		"args": {
+			"type": "windows"
+		},
+		"caption": "所有打开文件: Windows 换行符 (CRLF)"
+	},
+	{
+		"command": "set_line_ending_window",
+		"args": {
+			"type": "unix"
+		},
+		"caption": "所有打开文件: Unix 换行符 (LF)"
+	},
+	{
+		"command": "set_line_ending_window",
+		"args": {
+			"type": "cr"
+		},
+		"caption": "所有打开文件: Mac OS 9 换行符 (CR)"
+	},
+
+	{
+		"caption": "-"
+    }
+
+]

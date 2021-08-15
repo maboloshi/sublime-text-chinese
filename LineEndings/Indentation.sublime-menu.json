@@ -1,0 +1,22 @@
+[
+	{
+		"caption": "-"
+	},
+	{
+		"command": "convert_indentation_window",
+		"args": {
+			"type": "spaces"
+		},
+		"caption": "所有打开文件: 空格缩进"
+	},
+	{
+		"command": "convert_indentation_window",
+		"args": {
+			"type": "tabs"
+		},
+		"caption": "所有打开文件: Tab 缩进"
+	},
+	{
+		"caption": "-"
+	}
+]
