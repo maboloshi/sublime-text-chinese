@@ -48,6 +48,7 @@
 			},
 			{
 				"caption": "指定编码方式打开",
+				"id": "reopen_with_encoding",
 				"children":
 				[
 					{ "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },
@@ -91,6 +92,7 @@
 			{ "command": "save", "args": {"async": true}, "caption": "保存(S)", "mnemonic": "S" },
 			{
 				"caption": "指定编码方式保存",
+				"id": "save_with_encoding",
 				"children":
 				[
 					{ "caption": "UTF-8", "command": "save", "args": { "async": true, "encoding": "utf-8" } },
@@ -953,7 +955,7 @@
 			{ "command": "show_license_window", "caption": "输入许可证" },
 			{ "command": "remove_license", "caption": "删除许可证"},
 			{ "caption": "-" },
-			{ "command": "update_check", "caption": "检查更新…", "platform": "!Linux" },
+			{ "command": "update_check", "caption": "检查更新…" },
 			{ "command": "show_changelog", "caption": "更新日志…" },
 			{ "command": "show_about_window", "caption": "关于 Sublime Text(A)", "mnemonic": "A" }
 		]
