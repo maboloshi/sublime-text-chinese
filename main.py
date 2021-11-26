@@ -1,6 +1,7 @@
 import sublime
 import sublime_plugin
 import os
+import re
 
 
 def plugin_loaded():
@@ -20,8 +21,8 @@ def plugin_loaded():
         # 合并之后的插件清单
         trans_list = default_trans_list + ins_pack_list
 
-        # *.sublime-menu.json 资源清单 (降序)
-        sublime_menu_json_list = sorted(sublime.find_resources("*.sublime-menu.json"), reverse=True)
+        # *.sublime-menu.json
+        sublime_menu_json_list = sublime.find_resources("*.sublime-menu.json")
 
         # 开始翻译
         for item in trans_list:
@@ -33,10 +34,10 @@ def plugin_loaded():
                     if not os.path.exists(target_dir):
                         os.makedirs(target_dir)
 
-                    # OSX 平台 使用无快捷键提示版本
-                    # 之前使用 sorted 降序处理, 规避了 "Main (OSX).sublime-menu" 被 "Main.sublime-menu" 复写的问题
-                    if platform == 'osx' and target_file.find('Main (OSX).sublime-menu') != -1:
-                        target_file = target_file.replace('Main (OSX)', 'Main')
+                    # OSX 平台 删除快捷键提示
+                    if platform == "osx":
+                        pattern = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
+                        original_file_res = re.sub(pattern, "", original_file_res)
 
                     # 写入目标"翻译后菜单文件"
                     open(target_file, "w", encoding='utf8', newline='').write(original_file_res)
