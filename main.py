@@ -55,3 +55,33 @@ class ResetTranslationCommand(sublime_plugin.TextCommand):
                 os.remove(mark_file)
             plugin_loaded()
             sublime.message_dialog("翻译已更新！")
+
+
+# 移除中文翻译
+class RemoveTranslationCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        if sublime.ok_cancel_dialog("确定移除中文翻译？现有翻译将被丢失..."):
+            remove_translation()
+            sublime.message_dialog("中文翻译已移除！")
+
+
+def remove_translation():
+    packages_path = sublime.packages_path()
+
+    # 默认翻译插件清单
+    default_trans_list = ["Default", "Diff", "ZZ-TopMenu"]
+    # 获取已安装插件清单
+    ins_pack_list = sublime.load_settings("Package Control.sublime-settings").get("installed_packages")
+    # 合并之后的插件清单
+    trans_list = default_trans_list + ins_pack_list
+
+    # *.sublime-menu.json 资源清单
+    sublime_menu_json_list = sublime.find_resources("*.sublime-menu.json")
+
+    # 开始移除中文翻译
+    for item in trans_list:
+        for f in sublime_menu_json_list:
+            if f.startswith("Packages/sublime-text-chinese/" + item):
+                target_file = packages_path + f.replace("Packages/sublime-text-chinese/", "/").replace('.json', '')
+                if os.path.exists(target_file):
+                    os.remove(target_file)

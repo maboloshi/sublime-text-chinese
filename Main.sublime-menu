@@ -15,6 +15,10 @@
 							{
 								"command": "reset_translation",
 								"caption": "重置翻译"
+							},
+							{
+								"command": "remove_translation",
+								"caption": "移除中文翻译"
 							}
 						]
 					}
