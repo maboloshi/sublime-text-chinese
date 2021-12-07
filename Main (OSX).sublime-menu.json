@@ -85,6 +85,7 @@
 					{ "caption": "土耳其语 (Windows 1254)", "command": "reopen", "args": {"encoding": "Turkish (Windows 1254)" } },
 					{ "caption": "土耳其语 (ISO 8859-9)", "command": "reopen", "args": {"encoding": "Turkish (ISO 8859-9)" } },
 					{ "caption": "越南语 (Windows 1258)", "command": "reopen", "args": {"encoding": "Vietnamese (Windows 1258)" } },
+					{ "caption": "Chinese (GB18030)", "command": "reopen", "args": {"encoding": "Chinese (GB18030)" } },
 					{ "caption": "-" },
 					{ "caption": "十六进制", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
 				]
@@ -133,6 +134,7 @@
 					{ "caption": "土耳其语 (Windows 1254)", "command": "save", "args": { "async": true, "encoding": "Turkish (Windows 1254)" } },
 					{ "caption": "土耳其语 (ISO 8859-9)", "command": "save", "args": { "async": true, "encoding": "Turkish (ISO 8859-9)" } },
 					{ "caption": "越南语 (Windows 1258)", "command": "save", "args": { "async": true, "encoding": "Vietnamese (Windows 1258)" } },
+					{ "caption": "Chinese (GB18030)", "command": "save", "args": { "async": true, "encoding": "Chinese (GB18030)" } },
 					{ "caption": "-" },
 					{ "caption": "十六进制", "command": "save", "args": { "async": true, "encoding": "Hexadecimal" } }
 				]
