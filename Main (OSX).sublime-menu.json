@@ -77,6 +77,7 @@
 					{ "caption": "希伯来语 (ISO 8859-8)", "command": "reopen", "args": { "encoding": "Hebrew (ISO 8859-8)" } },
 					{ "caption": "希伯来语 (Windows 1255)", "command": "reopen", "args": { "encoding": "Hebrew (Windows 1255)" } },
 					{ "caption": "北欧语 (ISO 8859-10)", "command": "reopen", "args": { "encoding": "Nordic (ISO 8859-10)" } },
+					{ "caption": "北欧语 (Windows 865)", "command": "reopen", "args": { "encoding": "Nordic (Windows 865)" } },
 					{ "caption": "罗马尼亚语 (ISO 8859-16)", "command": "reopen", "args": { "encoding": "Romanian (ISO 8859-16)" } },
 					{ "caption": "土耳其语 (ISO 8859-9)", "command": "reopen", "args": { "encoding": "Turkish (ISO 8859-9)" } },
 					{ "caption": "土耳其语 (Windows 1254)", "command": "reopen", "args": {"encoding": "Turkish (Windows 1254)" } },
@@ -277,7 +278,11 @@
 					{ "command": "title_case", "caption": "首字母大写" },
 					{ "command": "upper_case", "caption": "大写" },
 					{ "command": "lower_case", "caption": "小写" },
-					{ "command": "swap_case", "caption": "大小写互换" }
+					{ "command": "swap_case", "caption": "大小写互换" },
+					{ "command": "convert_ident_case", "caption": "小驼峰式", "args": {"case": "title", "first_case": "lower"} },
+					{ "command": "convert_ident_case", "caption": "大驼峰式", "args": {"case": "title"} },
+					{ "command": "convert_ident_case", "caption": "下划线式", "args": {"separator": "_", "case": "lower"} },
+					{ "command": "convert_ident_case", "caption": "连字符式", "args": {"separator": "-", "case": "lower"} },
 				]
 			},
 			{
