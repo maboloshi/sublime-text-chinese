@@ -1,0 +1,4 @@
+[
+    { "caption": "-" },
+    { "caption": "与当前标签页的差异…", "command": "diff_tabs", "args": { "group": -1, "index": -1 } }
+]
