@@ -209,9 +209,9 @@
 				"id": "text",
 				"children":
 				[
-					{ "command": "revert_hunk", "caption": "还原差异"  },
+					{ "command": "revert_hunk", "caption": "还原区块"  },
 					{ "command": "revert_modification", "caption": "还原修改" },
-					{ "command": "toggle_inline_diff", "caption": "显示/隐藏内嵌差异块" },
+					{ "command": "toggle_inline_diff", "caption": "显示/隐藏内联差异块" },
 					{ "caption": "-" },
 					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "向上插入空行" },
 					{ "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "向下插入空行" },
