@@ -15,7 +15,7 @@
 				"mnemonic": "R",
 				"children":
 				[
-					{ "command": "reopen_last_file", "caption": "重新打开已关闭的文件" },
+					{ "command": "reopen_last_file", "args": {"source": "window"}, "caption": "重新打开已关闭的文件" },
 					{ "caption": "-" },
 					{ "command": "open_recent_file", "args": {"index": 0 } },
 					{ "command": "open_recent_file", "args": {"index": 1 } },
@@ -91,7 +91,7 @@
 					{ "caption": "十六进制", "command": "reopen", "args": { "encoding": "Hexadecimal" } }
 				]
 			},
-			{ "command": "clone_file", "args": {"add_to_selection": true}, "caption": "拆分视图(E)", "mnemonic": "E" },
+			{ "command": "clone_file", "args": {"add_to_selection": true, "retain_viewport_position": true}, "caption": "拆分视图(E)", "mnemonic": "E" },
 			{ "command": "save", "args": {"async": true}, "caption": "保存(S)", "mnemonic": "S" },
 			{
 				"caption": "指定编码方式保存",
@@ -341,6 +341,7 @@
 			{ "command": "select_all", "caption": "选择全部" },
 			{ "command": "expand_selection", "args": {"to": "smart"}, "caption": "扩展选区" },
 			{ "command": "expand_selection", "args": {"to": "line"}, "caption": "选择至整行" },
+			{ "command": "expand_selection", "args": {"to": "line_prev"}, "caption": "Expand Selection to Line Upward" },
 			{ "command": "find_under_expand", "caption": "选择至单词" },
 			{ "command": "expand_selection_to_paragraph", "caption": "选择至区块" },
 			{ "command": "expand_selection_to_paragraph", "args": {"markup_aware": true}, "caption": "选择至段落" },
