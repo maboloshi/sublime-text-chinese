@@ -341,7 +341,7 @@
 			{ "command": "select_all", "caption": "选择全部" },
 			{ "command": "expand_selection", "args": {"to": "smart"}, "caption": "扩展选区" },
 			{ "command": "expand_selection", "args": {"to": "line"}, "caption": "选择至整行" },
-			{ "command": "expand_selection", "args": {"to": "line_prev"}, "caption": "Expand Selection to Line Upward" },
+			{ "command": "expand_selection", "args": {"to": "line_prev"}, "caption": "扩展至上一行" },
 			{ "command": "find_under_expand", "caption": "选择至单词" },
 			{ "command": "expand_selection_to_paragraph", "caption": "选择至区块" },
 			{ "command": "expand_selection_to_paragraph", "args": {"markup_aware": true}, "caption": "选择至段落" },
