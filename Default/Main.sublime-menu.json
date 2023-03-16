@@ -408,7 +408,7 @@
 				"mnemonic": "R",
 				"children":
 				[
-					{ "command": "show_panel", "args": {"panel": "output.find_results"}, "caption": "显示结果面板" },
+					{ "command": "show_panel", "args": {"panel": "output.find_results", "panel_name" : "Results Panel", "toggle" : true, "toggle_when_not_focused": true}, "caption": "显示结果面板" },
 					{ "command": "next_result", "caption": "下一个结果" },
 					{ "command": "prev_result", "caption": "上一个结果" }
 				]
