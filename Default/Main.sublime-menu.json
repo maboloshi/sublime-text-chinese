@@ -741,7 +741,7 @@
 				"id": "bookmarks",
 				"children":
 				[
-					{ "command": "toggle_bookmark", "caption": "添加/删除书签" },
+					{ "command": "toggle_bookmark", "args": {"toggle_line": true }, "caption": "添加/删除书签" },
 					{ "command": "next_bookmark", "caption": "跳转到下一书签" },
 					{ "command": "prev_bookmark", "caption": "跳转到上一书签" },
 					{ "command": "clear_bookmarks", "caption": "清除全部书签" },
@@ -918,6 +918,14 @@
 				},
 				"caption": "快捷键设置"
 			},
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "${packages}/Default/Default ($platform).sublime-mousemap",
+					"default": "[\n\t$0\n]\n"
+				},
+				"caption": "Mouse Bindings"
+			},
 			{ "caption": "-" },
 			{
 				"caption": "选择配色方案…",
@@ -941,6 +949,7 @@
 				"caption": "字体",
 				"children":
 				[
+					{ "command": "choose_font", "caption": "Choose…" },
 					{ "command": "increase_font_size", "caption": "增大" },
 					{ "command": "decrease_font_size", "caption": "减小" },
 					{ "caption": "-" },
