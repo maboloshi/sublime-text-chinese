@@ -924,7 +924,7 @@
 					"base_file": "${packages}/Default/Default ($platform).sublime-mousemap",
 					"default": "[\n\t$0\n]\n"
 				},
-				"caption": "Mouse Bindings"
+				"caption": "鼠标键设置"
 			},
 			{ "caption": "-" },
 			{
@@ -949,7 +949,7 @@
 				"caption": "字体",
 				"children":
 				[
-					{ "command": "choose_font", "caption": "Choose…" },
+					{ "command": "choose_font", "caption": "选择字体…" },
 					{ "command": "increase_font_size", "caption": "增大" },
 					{ "command": "decrease_font_size", "caption": "减小" },
 					{ "caption": "-" },
