@@ -91,6 +91,8 @@
 					{ "caption": "十六进制", "command": "reopen", "args": { "encoding": "Hexadecimal" } }
 				]
 			},
+			{ "command": "force_reopen_as", "args": {"type": "image"}, "caption": "Reopen File as Image" },
+			{ "command": "force_reopen_as", "args": {"type": "text"}, "caption": "Reopen File as Text" },
 			{ "command": "clone_file", "args": {"add_to_selection": true, "retain_viewport_position": true}, "caption": "拆分视图(E)", "mnemonic": "E" },
 			{ "command": "save", "args": {"async": true}, "caption": "保存(S)", "mnemonic": "S" },
 			{
@@ -258,15 +260,15 @@
 					{ "command": "unfold", "caption": "展开" },
 					{ "command": "unfold_all", "caption": "全部展开" },
 					{ "caption": "-" },
-					{ "caption": "折叠全部", "command": "fold_by_level", "args": {"level": 1} },
-					{ "caption": "折叠 2 层", "command": "fold_by_level", "args": {"level": 2} },
-					{ "caption": "折叠 3 层", "command": "fold_by_level", "args": {"level": 3} },
-					{ "caption": "折叠 4 层", "command": "fold_by_level", "args": {"level": 4} },
-					{ "caption": "折叠 5 层", "command": "fold_by_level", "args": {"level": 5} },
-					{ "caption": "折叠 6 层", "command": "fold_by_level", "args": {"level": 6} },
-					{ "caption": "折叠 7 层", "command": "fold_by_level", "args": {"level": 7} },
-					{ "caption": "折叠 8 层", "command": "fold_by_level", "args": {"level": 8} },
-					{ "caption": "折叠 9 层", "command": "fold_by_level", "args": {"level": 9} },
+					{ "caption": "折叠全部", "command": "fold_by_level", "mnemonic": "A", "args": {"level": 1} },
+					{ "caption": "折叠 2 层", "command": "fold_by_level", "mnemonic": "2", "args": {"level": 2} },
+					{ "caption": "折叠 3 层", "command": "fold_by_level", "mnemonic": "3", "args": {"level": 3} },
+					{ "caption": "折叠 4 层", "command": "fold_by_level", "mnemonic": "4", "args": {"level": 4} },
+					{ "caption": "折叠 5 层", "command": "fold_by_level", "mnemonic": "5", "args": {"level": 5} },
+					{ "caption": "折叠 6 层", "command": "fold_by_level", "mnemonic": "6", "args": {"level": 6} },
+					{ "caption": "折叠 7 层", "command": "fold_by_level", "mnemonic": "7", "args": {"level": 7} },
+					{ "caption": "折叠 8 层", "command": "fold_by_level", "mnemonic": "8", "args": {"level": 8} },
+					{ "caption": "折叠 9 层", "command": "fold_by_level", "mnemonic": "9", "args": {"level": 9} },
 					{ "caption": "-" },
 					{ "command": "fold_tag_attributes", "caption": "折叠标签属性" }
 				]
@@ -367,15 +369,15 @@
 					{ "command": "focus_to_left", "caption": "聚焦左侧标签页" },
 					{ "command": "focus_to_right", "caption": "聚焦右侧标签页" },
 					{ "caption": "-" },
-					{ "command": "focus_by_index", "args": {"index": 0}, "caption": "聚焦标签页 1" },
-					{ "command": "focus_by_index", "args": {"index": 1}, "caption": "聚焦标签页 2" },
-					{ "command": "focus_by_index", "args": {"index": 2}, "caption": "聚焦标签页 3" },
-					{ "command": "focus_by_index", "args": {"index": 3}, "caption": "聚焦标签页 4" },
-					{ "command": "focus_by_index", "args": {"index": 4}, "caption": "聚焦标签页 5" },
-					{ "command": "focus_by_index", "args": {"index": 5}, "caption": "聚焦标签页 6" },
-					{ "command": "focus_by_index", "args": {"index": 6}, "caption": "聚焦标签页 7" },
-					{ "command": "focus_by_index", "args": {"index": 7}, "caption": "聚焦标签页 8" },
-					{ "command": "focus_by_index", "args": {"index": 8}, "caption": "聚焦标签页 9" },
+					{ "command": "focus_by_index", "args": {"index": 0}, "caption": "聚焦标签页 1", "mnemonic": "1" },
+					{ "command": "focus_by_index", "args": {"index": 1}, "caption": "聚焦标签页 2", "mnemonic": "2" },
+					{ "command": "focus_by_index", "args": {"index": 2}, "caption": "聚焦标签页 3", "mnemonic": "3" },
+					{ "command": "focus_by_index", "args": {"index": 3}, "caption": "聚焦标签页 4", "mnemonic": "4" },
+					{ "command": "focus_by_index", "args": {"index": 4}, "caption": "聚焦标签页 5", "mnemonic": "5" },
+					{ "command": "focus_by_index", "args": {"index": 5}, "caption": "聚焦标签页 6", "mnemonic": "6" },
+					{ "command": "focus_by_index", "args": {"index": 6}, "caption": "聚焦标签页 7", "mnemonic": "7" },
+					{ "command": "focus_by_index", "args": {"index": 7}, "caption": "聚焦标签页 8", "mnemonic": "8" },
+					{ "command": "focus_by_index", "args": {"index": 8}, "caption": "聚焦标签页 9", "mnemonic": "9" },
 					{ "command": "focus_by_index", "args": {"index": 9}, "caption": "聚焦标签页 10" },
 				]
 			},
@@ -538,31 +540,36 @@
 						"caption": "最大列数: 1",
 						"command": "set_max_columns",
 						"checkbox": true,
-						"args": { "columns": 1 }
+						"args": { "columns": 1 },
+						"mnemonic": "1",
 					},
 					{
 						"caption": "最大列数: 2",
 						"command": "set_max_columns",
 						"checkbox": true,
-						"args": { "columns": 2 }
+						"args": { "columns": 2 },
+						"mnemonic": "2",
 					},
 					{
 						"caption": "最大列数: 3",
 						"command": "set_max_columns",
 						"checkbox": true,
-						"args": { "columns": 3 }
+						"args": { "columns": 3 },
+						"mnemonic": "3",
 					},
 					{
 						"caption": "最大列数: 4",
 						"command": "set_max_columns",
 						"checkbox": true,
-						"args": { "columns": 4 }
+						"args": { "columns": 4 },
+						"mnemonic": "4",
 					},
 					{
 						"caption": "最大列数: 5",
 						"command": "set_max_columns",
 						"checkbox": true,
-						"args": { "columns": 5 }
+						"args": { "columns": 5 },
+						"mnemonic": "5",
 					},
 				]
 			},
@@ -575,10 +582,10 @@
 					{ "command": "focus_neighboring_group", "caption": "下一分组" },
 					{ "command": "focus_neighboring_group", "args": {"forward": false}, "caption": "上一分组" },
 					{ "caption": "-" },
-					{ "command": "focus_group", "args": {"group": 0}, "caption": "分组 1" },
-					{ "command": "focus_group", "args": {"group": 1}, "caption": "分组 2" },
-					{ "command": "focus_group", "args": {"group": 2}, "caption": "分组 3" },
-					{ "command": "focus_group", "args": {"group": 3}, "caption": "分组 4" }
+					{ "command": "focus_group", "args": {"group": 0}, "caption": "分组 1", "mnemonic": "1" },
+					{ "command": "focus_group", "args": {"group": 1}, "caption": "分组 2", "mnemonic": "2" },
+					{ "command": "focus_group", "args": {"group": 2}, "caption": "分组 3", "mnemonic": "3" },
+					{ "command": "focus_group", "args": {"group": 3}, "caption": "分组 4", "mnemonic": "4" }
 				]
 			},
 			{
@@ -589,10 +596,10 @@
 					{ "command": "move_to_neighboring_group", "caption": "下一分组" },
 					{ "command": "move_to_neighboring_group", "args": {"forward": false}, "caption": "上一分组" },
 					{ "caption": "-" },
-					{ "command": "move_to_group", "args": {"group": 0}, "caption": "分组 1" },
-					{ "command": "move_to_group", "args": {"group": 1}, "caption": "分组 2" },
-					{ "command": "move_to_group", "args": {"group": 2}, "caption": "分组 3" },
-					{ "command": "move_to_group", "args": {"group": 3}, "caption": "分组 4" }
+					{ "command": "move_to_group", "args": {"group": 0}, "caption": "分组 1", "mnemonic": "1" },
+					{ "command": "move_to_group", "args": {"group": 1}, "caption": "分组 2", "mnemonic": "2" },
+					{ "command": "move_to_group", "args": {"group": 2}, "caption": "分组 3", "mnemonic": "3" },
+					{ "command": "move_to_group", "args": {"group": 3}, "caption": "分组 4", "mnemonic": "4" }
 				]
 			},
 			{ "caption": "-" },
@@ -610,14 +617,14 @@
 				[
 					{ "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "使用空格缩进", "checkbox": true },
 					{ "caption": "-" },
-					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Tab宽度: 1", "checkbox": true },
-					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Tab宽度: 2", "checkbox": true },
-					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "Tab宽度: 3", "checkbox": true },
-					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "Tab宽度: 4", "checkbox": true },
-					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "Tab宽度: 5", "checkbox": true },
-					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "Tab宽度: 6", "checkbox": true },
-					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "Tab宽度: 7", "checkbox": true },
-					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "Tab宽度: 8", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Tab宽度: 1", "mnemonic": "1", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Tab宽度: 2", "mnemonic": "2", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "Tab宽度: 3", "mnemonic": "3", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "Tab宽度: 4", "mnemonic": "4", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "Tab宽度: 5", "mnemonic": "5", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "Tab宽度: 6", "mnemonic": "6", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "Tab宽度: 7", "mnemonic": "7", "checkbox": true },
+					{ "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "Tab宽度: 8", "mnemonic": "8", "checkbox": true },
 					{ "caption": "-" },
 					{ "command": "detect_indentation", "caption": "猜测来自缓冲区的设置" },
 					{ "caption": "-" },
@@ -978,6 +985,7 @@
 			{ "caption": "-" },
 			{ "command": "update_check", "caption": "检查更新…" },
 			{ "command": "show_changelog", "caption": "更新日志…" },
+			{ "command": "show_attribution", "caption": "Licenses and Attribution…" },
 			{ "command": "show_about_window", "caption": "关于 Sublime Text(A)", "mnemonic": "A" }
 		]
 	}
