@@ -362,6 +362,7 @@
 					{ "command": "unselect_others", "caption": "取消选择其他标签页" },
 					{ "command": "unselect_to_left", "caption": "取消选择左侧标签页" },
 					{ "command": "unselect_to_right", "caption": "取消选择右侧标签页" },
+					{ "command": "unselect_current", "caption": "Unselect Current" },
 					{ "caption": "-" },
 					{ "command": "select_to_left", "caption": "选择左侧标签页" },
 					{ "command": "select_to_right", "caption": "选择右侧标签页" },
