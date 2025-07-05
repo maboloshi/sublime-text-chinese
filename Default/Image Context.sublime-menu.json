@@ -1,10 +1,10 @@
 [
     { "caption": "-", "id": "repo_commands" },
-    { "caption": "Open Git Repository…", "command": "sublime_merge_open_repo" },
-    { "caption": "File History…", "command": "sublime_merge_file_history" },
+    { "caption": "Sublime Merge: 打开 Git 仓库…", "command": "sublime_merge_open_repo" },
+    { "caption": "Sublime Merge: 文件历史…", "command": "sublime_merge_file_history" },
     { "caption": "-", "id": "file" },
-    { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "Open Containing Folder…" },
-    { "command": "copy_path", "caption": "Copy File Path" },
-    { "command": "reveal_in_side_bar", "caption": "Reveal in Side Bar" },
+    { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "打开所在文件夹…" },
+    { "command": "copy_path", "caption": "复制文件路径" },
+    { "command": "reveal_in_side_bar", "caption": "在侧边栏中显示" },
     { "caption": "-", "id": "end" }
 ]

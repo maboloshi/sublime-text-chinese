@@ -91,8 +91,8 @@
 					{ "caption": "十六进制", "command": "reopen", "args": { "encoding": "Hexadecimal" } }
 				]
 			},
-			{ "command": "force_reopen_as", "args": {"type": "image"}, "caption": "Reopen File as Image" },
-			{ "command": "force_reopen_as", "args": {"type": "text"}, "caption": "Reopen File as Text" },
+			{ "command": "force_reopen_as", "args": {"type": "image"}, "caption": "以图像形式重新打开" },
+			{ "command": "force_reopen_as", "args": {"type": "text"}, "caption": "以文本形式重新打开" },
 			{ "command": "clone_file", "args": {"add_to_selection": true, "retain_viewport_position": true}, "caption": "拆分视图(E)", "mnemonic": "E" },
 			{ "command": "save", "args": {"async": true}, "caption": "保存(S)", "mnemonic": "S" },
 			{
@@ -985,7 +985,7 @@
 			{ "caption": "-" },
 			{ "command": "update_check", "caption": "检查更新…" },
 			{ "command": "show_changelog", "caption": "更新日志…" },
-			{ "command": "show_attribution", "caption": "Licenses and Attribution…" },
+			{ "command": "show_attribution", "caption": "第三方许可与归属..." },
 			{ "command": "show_about_window", "caption": "关于 Sublime Text(A)", "mnemonic": "A" }
 		]
 	}
