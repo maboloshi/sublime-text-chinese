@@ -1,0 +1,47 @@
+[{
+  "caption": "HTML/CSS/JS Prettify",
+  "children": [{
+    "caption": "格式化代码",
+    "command": "htmlprettify"
+  }, {
+    "caption": "-"
+  }, {
+    "caption": "格式化设置 - Default",
+    "command": "htmlprettify_set_prettify_prefs"
+  }, {
+    "caption": "格式化设置 - User",
+    "command": "htmlprettify_set_user_prettify_prefs"
+  }, {
+    "caption": "-"
+  }, {
+    "caption": "插件选项 - Default",
+    "command": "htmlprettify_set_plugin_options"
+  }, {
+    "caption": "插件选项 - User",
+    "command": "htmlprettify_set_user_plugin_options"
+  }, {
+    "caption": "-"
+  }, {
+    "caption": "键盘快捷键 - Default",
+    "command": "htmlprettify_set_keyboard_shortcuts"
+  }, {
+    "caption": "键盘快捷键 - User",
+    "command": "htmlprettify_set_user_keyboard_shortcuts"
+  }, {
+    "caption": "-"
+  }, {
+    "caption": "设置 `node` 路径",
+    "command": "htmlprettify_set_node_path"
+  }, {
+    "caption": "-"
+  }, {
+    "caption": "帮助",
+    "command": "htmlprettify_open_help"
+  }, {
+    "caption": "提交错误报告",
+    "command": "htmlprettify_open_bug_file"
+  }, {
+    "caption": "v2.0 版本有哪些新功能？",
+    "command": "htmlprettify_open_release_notes"
+  }]
+}]
