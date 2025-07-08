@@ -1,0 +1,22 @@
+[{
+	"id": "preferences",
+	"children":
+	[{
+		"caption": "Package Settings",
+		"id": "package-settings",
+		"children":
+		[{
+			"caption": "Compare Side-By-Side",
+			"children": [
+			    {
+			        "caption": "Settings",
+			        "command": "edit_settings", "args":
+			        {
+			            "base_file": "${packages}/Compare Side-By-Side/SBSCompare.sublime-settings",
+			            "default": "{\n\t$0\n}\n"
+			        }
+			    }
+			]
+		}]
+	}]
+}]

@@ -1,0 +1,9 @@
+[
+	{ "caption": "-" },
+	{ "caption": "比较...", "command": "sbs_compare" },
+	{ "caption": "选择要比较的项目", "command": "sbs_mark_sel" },
+	{ "caption": "比较项目", "command": "sbs_compare", "args": { "compare_selections": true } },
+	{ "caption": "上一处修改", "command": "sbs_prev_diff" },
+	{ "caption": "下一处修改", "command": "sbs_next_diff" },
+	{ "caption": "-" }
+]
