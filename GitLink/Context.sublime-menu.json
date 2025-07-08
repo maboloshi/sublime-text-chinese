@@ -1,0 +1,96 @@
+[
+    {
+        "caption": "-",
+        "id": "gitlink-start-separator"
+    },
+    {
+        "caption": "GitLink",
+        "id": "gitlink-options",
+        "children": [
+            {
+                "caption": "复制 Git URL 到文件",
+                "id": "gitlink-link-file",
+                "command": "gitlink",
+                "args": {
+                    "line": false,
+                    "web": false,
+                    "blame": false
+                }
+            },
+            {
+                "caption": "复制 Git URL 到行",
+                "id": "gitlink-link-line",
+                "command": "gitlink",
+                "args": {
+                    "line": true,
+                    "web": false,
+                    "blame": false
+                }
+            },
+            {
+                "caption": "复制 Git Blame URL 到文件",
+                "id": "gitlink-link-file",
+                "command": "gitlink",
+                "args": {
+                    "line": false,
+                    "web": false,
+                    "blame": true
+                }
+            },
+            {
+                "caption": "复制 Git Blame URL 到行",
+                "id": "gitlink-link-line",
+                "command": "gitlink",
+                "args": {
+                    "line": true,
+                    "web": false,
+                    "blame": true
+                }
+            },
+            {
+                "caption": "-",
+                "id": "gitlink-web-separator"
+            },
+            {
+                "caption": "打开 Git URL 到文件",
+                "id": "gitlink-link-file",
+                "command": "gitlink",
+                "args": {
+                    "line": false,
+                    "web": true,
+                    "blame": false
+                }
+            },
+            {
+                "caption": "打开 Git URL 到行",
+                "id": "gitlink-link-line",
+                "command": "gitlink",
+                "args": {
+                    "line": true,
+                    "web": true,
+                    "blame": false
+                }
+            },
+            {
+                "caption": "打开 Git Blame URL 到文件",
+                "id": "gitlink-link-file",
+                "command": "gitlink",
+                "args": {
+                    "line": false,
+                    "web": true,
+                    "blame": true
+                }
+            },
+            {
+                "caption": "打开 Git Blame URL 到行",
+                "id": "gitlink-link-line",
+                "command": "gitlink",
+                "args": {
+                    "line": true,
+                    "web": true,
+                    "blame": true
+                }
+            }
+        ]
+    }
+]
