@@ -1,0 +1,5 @@
+[
+   { "caption": "-" },
+   { "caption": "比较...", "command": "sbs_compare" },
+   { "caption": "与当前标签页比较", "command": "sbs_compare", "args": { "with_active": true, "group": -1, "index": -1 } }
+]
